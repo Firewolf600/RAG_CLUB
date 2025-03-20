@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            background-color: #1A1A1D;
+            color: #E5C07B;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        .content {
+            font-size: 22px;
+            line-height: 1.7;
+            color: #B09E99;
+            animation: fadeIn 2s ease-in-out forwards 0.5s;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1D;
+            background: linear-gradient(135deg, #E5C07B, #B09E99);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: linear-gradient(135deg, #B09E99, #E5C07B);
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Boxes */
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            text-align: left;
+        }
+        .section h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #E5C07B;
+        }
+        .section p {
+            font-size: 20px;
+            color: #B09E99;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* First Box with Image */
+        .section-with-image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .text-content {
+            width: 60%;
+        }
+        .section img {
+            width: 35%;
+            height: auto; 
+            min-height: 300px; 
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+    
+        .large-image {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            min-height: 400px;
+            border-radius: 10px;
+            margin: 50px auto;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .final-paragraph {
+            font-size: 22px;
+            color: #B09E99;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        /* GitHub Button */
+        .github-button {
+            display: block;
+            margin: 30px auto 50px;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1D;
+            background: linear-gradient(135deg, #E5C07B, #B09E99);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .github-button:hover {
+            background: linear-gradient(135deg, #B09E99, #E5C07B);
+            transform: scale(1.05);
+        }
+
+       
+        @media (max-width: 768px) {
+            .section-with-image {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-content {
+                width: 100%;
+            }
+            .section img {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">For Students</h1>
+        <p class="content">Leverage AI to revolutionize education.<BR>Learn how AIs work while creating ur own local ai system based on RAG <br>Even on limited educational material (private information) <br> <br> <br> SCROLL DOWN!</p>
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+
+    <!-- First Box with Image -->
+    <div class="section section-with-image">
+        <div class="text-content">
+            <h2>What is an LLM?</h2>
+            <p>Large Language Models (LLMs) are AI models trained on vast amounts of internet data. For example, ChatGPT is an LLM. But what if you could run such a model entirely offline, on your own machine, without internet access? <br>Well, you can—thanks to open-source LLMs!.</p>
+        </div>
+        <img src="M1.png" alt="LLM Visualization">
+    </div>
+
+    
+    <div class="section"><h2>What is RAG? And Why</h2><p>Retrieval-Augmented Generation (RAG) enhances AI's ability to retrieve and generate responses based on specific data you provide. Imagine you have a large dataset—such as a 500-page PDF—containing valuable information. Instead of relying on internet searches that may yield generic or inaccurate results, RAG ensures the AI retrieves and utilizes only the relevant information from your provided dataset. This approach improves accuracy, relevance, and contextual understanding, making AI responses more reliable and domain-specific.</p></div>
+    <div class="section"><h2>How to Apply RAG?</h2><p>Implementing RAG involves integrating a retrieval system that fetches real-time data from the datasource  before the  AI responds with set parameters that you give it.<br> This could be , the complexity or the way u want ur Ai to think or the  way you want it to give output to you <br><br><br> My first model M1000 is a simple RAG system which uses Tinyllama as its LLM ,Unlike default rag system i have made chunks of the input data before storing it into a vector database with the chunks overlapping one another, this is my definition of a basic and efficient RAG system. </p></div>
+    <div class="section"><h2>Optimizing Your RAG Pipeline</h2><p>Fine-tune retrieval methods, embeddings, and ranking strategies to enhance efficiency later on when u continue building ur retrieval pipeline. M2000 my next vertion of the bot will be focused on ranking and indexing the data more efficiently.  </p></div>
+    <div class="section"><h2>Why RAG Club?</h2><p>Venturing into the world of AI is not a simple task expecially if u dont find  the right community my goal is to help styudents new to rag and its systems get to know eachother and their projects better this helps  us bing a sence of community and overall inspire people to do more and to be inspired by others projects and grow together!.</p></div>
+
+
+
+
+
+
+
+
+
+    
+    <p class="final-paragraph">
+        Making ur own Localized RAG system comes with its own benifits and i think you should give it a try too! <br>My first AI will be named M1000 and its first version will be 1.0.0 <br> I plan on giving him a personality and focus on  its prompting later on <br> :) check out the pipeline  rag diagram for the M1000 below , Github linked down below! read the READ ME file to get an entire explanation on how M1000 works (ps its highly detailed its perfect if ur a beginner)
+    </p>
+
+    
+
+
+
+
+
+
+
+
+    <img src="M1PIPELINE.png" alt="AI-powered education" class="large-image">
+
+    
+    <a href="https://github.com" class="github-button" target="_blank">View on GitHub</a>
+
+
+    <script>
+        document.addEventListener("scroll", function() {
+            var sections = document.querySelectorAll(".section, .large-image, .github-button, .final-paragraph");
+            var screenPosition = window.innerHeight / 1.3;
+            sections.forEach(function(section) {
+                if (section.getBoundingClientRect().top < screenPosition) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

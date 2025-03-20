@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            background-color: #1A1A1D;
+            color: #E5C07B;
+            text-align: center;
+        }
+
+        /* Logo Floating Above Navbar */
+        .logo {
+            position: absolute;
+            top: 9px;
+            left: 20px;
+            z-index: 1001; /* Keeps it above navbar */
+        }
+        .logo img {
+            top:-15px;
+            height: 200px; /* Adjust logo size */
+            position: fixed;
+        }
+
+        /* Navbar */
+        header {
+            background: linear-gradient(135deg, #5e3b24, #6d5852);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: #E5C07B;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: rgba(176, 158, 153, 0.3);
+        }
+
+        .container {
+            margin-top: 150px;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 60px;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #E5C07B;
+        }
+        .content {
+            font-size: 22px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards 0.5s;
+            line-height: 1.7;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            color: #B09E99;
+        }
+
+        .section {
+            max-width: 850px;
+            margin: 100px auto;
+            text-align: left;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transform: translateX(-50px);
+            animation: slideIn 1.5s ease-in-out forwards 0.5s;
+        }
+        .section-text {
+            flex: 1;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #E5C07B;
+            text-align: left;
+        }
+        .section-content {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #B09E99;
+            margin-bottom: 20px;
+        }
+        .section-image img {
+            width: 180px;
+            height: auto;
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards 0.8s;
+        }
+        .section-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1D;
+            background: linear-gradient(135deg, #E5C07B, #B09E99);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .section-button:hover {
+            background: linear-gradient(135deg, #B09E99, #E5C07B);
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="logo">
+        <img src="ragclub_logo.png" alt="Site Logo"> <!-- Replace with your actual logo -->
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#info">Info</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="title">Next-Gen AI for Smarter Innovation</h1>
+        <p class="content">Empower your vision with cutting-edge AI solutions built for precision and adaptability. Our enhanced Retrieval-Augmented Generation (RAG) pipeline transforms data into actionable intelligence, unlocking smarter automation and dynamic user experiences. Seamlessly integrate AI-driven chatbots, data retrieval systems, and intelligent assistants tailored to your needs.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-text">
+            <h2 class="section-title">For Students</h2>
+            <p class="section-content">Unlock the full potential of AI in education. Our solutions help students leverage AI-driven tools for research, learning, and productivity. From automated study assistants to smart knowledge retrieval systems, transform the way you absorb information and stay ahead of the curve.</p>
+            <a href="frstudents.html" class="section-button">Learn More</a>
+        </div>
+        <div class="section-image">
+            <img src="M1.png" alt="AI assisting students">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-text">
+            <h2 class="section-title">For Businesses</h2>
+            <p class="section-content">Enhance efficiency and drive growth with AI-powered automation. Our business solutions help companies streamline operations, improve decision-making, and deliver cutting-edge customer experiences. Unlock the potential of intelligent AI tools tailored to your industry.</p>
+            <a href="business.html" class="section-button">Discover More</a>
+        </div>
+        <div class="section-image">
+            <img src="BMO 1000.png" alt="AI transforming businesses">
+        </div>
+    </div>
+
+</body>
+</html>
